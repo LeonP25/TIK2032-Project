@@ -49,7 +49,7 @@
 
       <section class="home bd-grid section" id="home">
        <div style="padding-top: 100px;"><h2 class="home-title">
-        Hy! 👋, I Am<br /> <span class="home-title-color Baloo">Leonardus Morizio Paat
+        Hy! 👋, I Am<br /> <span class="home-title-color Baloo" id="typewriter">
 </span><br />
         <span class="animate-charcter">220211060231</span>
       </h2></div>
@@ -65,48 +65,14 @@
       
 
       <!--===== Projects =====-->
-      <section class="projects section" id="galery">
+      <section class="projects section" id="gallery">
         <h2 class="section-title">Gallery</h2>
 
-        <div class="project-container">
-          <div class="project-img">
-            <img src="assets/img/Gambar1.jpeg" alt="asp.net" />
-         
-         
-            
-          </div>
-          <div class="project-img">
-            <img src="assets/img/Gambar2.jpg" alt="asp.net" />
+        <div class="project-container" id="galleryContainer">
           
+
           
-          
-          </div>
-          <div class="project-img">
-            <img src="assets/img/Gambar3.jpeg" alt="asp.net" />
-          
-          
-          
-          </div>
-          <div class="project-img">
-            <img src="assets/img/Gambar4.jpeg" alt="asp.net" />
-          
-          
-          
-          </div>
-          <div class="project-img">
-            <img src="assets/img/Gambar5.jpeg" alt="asp.net" />
-          
-          
-          
-          </div>
-          <div class="project-img">
-            <img src="assets/img/Gambar6.jpeg" alt="asp.net" />
-          
-          
-          
-          </div>
-          
-            
+             
             
 
            
@@ -115,61 +81,28 @@
                   
                  
                     </div>
+                   
 
-
+<div class="centered sections-title">
+  <a class="small-btn button" onclick="loadGallery()" id="loadGalleryButton" href="#gallery">Muat Gambar</a>
+  <a class="small-btn button" onclick="previousGallery()" id="previousGalleryButton" style="display:none"
+    href="#gallery">Sebelumnya</a>
+  <a class="small-btn button" onclick="nextGallery()" id="nextGalleryButton" style="display:none"
+    href="#gallery">Selanjutnya</a>
+</div>
          
       </section>
+      
       <section class="projects section" id="blog">
         <h2 class="section-title">Projects</h2>
       
-        <div class="project-container">
-          <div class="project-img">
-            <img src="assets/img/Artiikel1.jpg" alt="asp.net" />
-            <p class="project-title">Manfaat Mengasah Keterampilan Baru</p>
-            <p class="project-subtitle">
-              Artikel ini membahas pentingnya terus mengasah keterampilan baru, seperti meningkatkan kecerdasan, memperluas jaringan
-              sosial, dan meningkatkan kepercayaan diri.
-            </p>
-            <a href="#" target="_blank" class="small-btn button">
-              Selengkapnya<i class="bx bxl-github"></i></a>
+        <div class="project-container" id="blogContainer">
           
-          </div>
-      
-          <div class="project-img">
-            <img src="assets/img/Artikel2.jpeg" alt="Quiz" />
-            <p class="project-title">Manfaat Berinvestasi untuk Masa Depan</p>
-            <p class="project-subtitle">
-            Artikel ini membahas manfaat berinvestasi uang dan waktu untuk masa depan, termasuk menciptakan keamanan finansial,
-            mengurangi risiko keuangan, dan mencapai tujuan hidup.
-            </p>
-            <a href="#" target="_blank" class="small-btn button">
-              Selengkapnya<i class="bx bxl-github"></i></a>
-        
-          </div>
-      
-          <div class="project-img">
-            <img src="assets/img/Artikel3.jpeg" alt="movie" />
-            <p class="project-title">Tips Menjaga Kesehatan Mata</p>
-            <p class="project-subtitle">
-              Artikel ini memberikan tips sederhana untuk menjaga kesehatan mata, seperti istirahat mata secara teratur, mengatur
-              pencahayaan yang tepat, dan membatasi waktu penggunaan perangkat elektronik.
-            </p>
-            <a href="#" target="_blank" class="small-btn button">
-              Selengkapnya<i class="bx bxl-github"></i></a>
-         
-          </div>
-      
-          <div class="project-img">
-            <img src="assets/img/Artikel4.jpg" alt="MiniShopping" />
-            <p class="project-title">Manfaat Membantu Orang Lain</p>
-            <p class="project-subtitle">
-            Artikel ini membahas manfaat psikologis dan emosional yang didapatkan dari membantu orang lain, seperti meningkatkan
-            rasa kepuasan, koneksi sosial, dan perasaan keterhubungan.
-            </p>
-             <a href="#" target="_blank" class="small-btn button">
-                Selengkapnya<i class="bx bxl-github"></i></a>
-          
-          </div>
+        </div>
+        <div class="centered sections-title">
+        <a class="small-btn button" onclick="loadBlog()" id="loadBlogButton" href="#blog">Muat Artikel</a>
+        <a class="small-btn button" onclick="previousBlog()" id="previousBlogButton" style="display:none" href="#blog">Sebelumnya</a>
+        <a class="small-btn button" onclick="nextBlog()" id="nextBlogButton" style="display:none" href="#blog">Selanjutnya</a>
         </div>
       </section>
 
@@ -198,6 +131,22 @@
       <p>&#169; Leonardus Morizio Paat
       220211060231</p>
     </footer>
+
+    <script src="script.js"></script>
+    <script>
+      var text = "Leonardus Morizio Paat";
+      var speed = 100; // milliseconds per character
+
+      function typeWriter() {
+        if (text.length > 0) {
+          document.getElementById("typewriter").innerHTML += text.charAt(0);
+          text = text.substring(1);
+          setTimeout(typeWriter, speed);
+        }
+      }
+
+      typeWriter();
+    </script>
 
 
   </body>

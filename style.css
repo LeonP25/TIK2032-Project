@@ -485,3 +485,39 @@ body{
         font-size: 13px;
     }
 }
+.centered {
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    height: 100vh;
+}
+.sections-title::after {
+    position: absolute;
+    content: "";
+    width: 64px;
+    height: 0.18rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 2rem;
+    background-color: var(--first-color);
+}
+.sections-title {
+    position: relative;
+    font-family: neon;
+    font-size: var(--h2-font-size);
+    color: var(--first-color);
+    margin-top: var(--mb-2);
+    margin-bottom: var(--mb-4);
+    text-align: center;
+}
+.sections-title {
+    margin-bottom: var(--mb-6);
+}
+
+.sections-title::after {
+    width: 80px;
+    top: 3rem;
+}
