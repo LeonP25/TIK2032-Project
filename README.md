@@ -1,2 +1,2 @@
-# TIK2032-Project
-Repositori project TIK2032 - [Leonardus Morizio Paat] [220211060231]
+
+Tugas 2 Praktikum Sistem Multimedia - [Leonardus Morizio Paat] [220211060231]
